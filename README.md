@@ -43,11 +43,13 @@ Figura N° 1: Modelo digital del proyectil 76/62.
 Luego, se utilizó un software de mecánica de fluidos CFD (Computational Fluid Dynamics) para simular un túnel de viento supersónico  que permitiera determinar el coeficiente de drag en función de la velocidad, como se muestra en la siguiente figura.
                                      
 <img src="img/Fig 2.png" align="centre" width = "600px"/>
+  
 Figura N° 2: Simulación del Proyectil en Software (CFD).
   
 Es importante señalar que, el coeficiente de drag es una medida que demuestra la eficiencia de un objeto en función de la resistencia que impone el fluido, dependiendo de dos factores principales: el número de Mach (estimación de la velocidad del fluido en base a la velocidad del sonido) y la forma aerodinámica de un proyectil determinado. Este coeficiente, es representado en una curva que varía en función de la velocidad, creada a partir de los valores obtenidos del análisis del túnel de viento, como se muestra en la siguiente figura.
   
 <img src="img/Fig 3.png" align="centre" width = "600px"/>
+  
 Figura N° 3: Gráfico de coeficiente de drag en función del número de MACH.
   
 Como se observa, el coeficiente de drag además tiene un alto valor en la región de 1 Mach, donde el proyectil está tratando de atravesar la barrera del sonido y se reduce de forma constante en la región supersónica hasta que se estabiliza.
@@ -57,7 +59,8 @@ Una vez determinado el coeficiente de drag en función de la velocidad para esta
 La atmósfera estandarizada es un estándar de la ISO (International Standard Organization) desarrollado como un modelo de atmosfera terrestre que permite obtener valores de presión, temperatura, densidad y viscosidad del aire en función de la altitud; se utiliza principalmente para la confección de cálculos aerodinámicos, navegación aérea y cálculos balísticos.
 Dentro de las hipótesis que plantea para establecer una atmósfera normalizada, se encuentran las siguientes: Grado de humedad nulo, atmósfera en equilibrio (inexistencia de vientos) y que se cumpla la ley de los gases perfectos. En base a estas condiciones, se presenta un extracto de la atmósfera estandarizada en la siguiente figura.
   
-<img src="img/Fig 4.png" align="centre" width = "700px"/>  
+<img src="img/Fig 4.png" align="centre" width = "700px"/>
+  
 Figura N° 4: Extracto de la Atmósfera Estandarizada ISA-ICAO.
   
 Con las condiciones de la Atmósfera Estandarizada y la determinación del coeficiente de drag en función de la velocidad, podemos modelar el comportamiento balístico del proyectil utilizando el Modelo Modificado de Masa Puntual que se presenta a continuación.
@@ -73,9 +76,11 @@ El modelo seleccionado permite modelar las trayectorias para este caso particula
 Enunciadas las condiciones atmosféricas estandarizadas, y disponiendo de un determinado Δt, se utilizan las ecuaciones y parámetros  que describen el movimiento del proyectil y tras su integración, se obtienen las siguientes trayectorias para ángulos de proyección desde 5°a 45° según lo muestra el gráfico de simulación de trayectorias realizada en el software MATLAB para el eje de las ordenadas, de las abscisas y el eje Z correspondientemente. 
   
 <img src="img/Fig 5.png" align="centre" width = "650px"/>
+  
 Figura N° 5: Simulación de trayectorias en MATLAB, eje X e Y.
 
 <img src="img/Fig 6.png" align="centre" width = "650px"/>
+  
 Figura N° 6: Simulación de trayectorias en MATLAB, eje X, Y, Z.
     
 
@@ -83,21 +88,25 @@ Figura N° 6: Simulación de trayectorias en MATLAB, eje X, Y, Z.
 La tabla de tiro principal permite la determinación de un ángulo de elevación necesario para batir la proyección sobre el plano horizontal (tabla de tiro de superficie) de un blanco, a una determinada distancia e incluye correcciones que se añaden linealmente y corresponden a cambios atmosféricos, de velocidad inicial, de peso del proyectil y de viento; si bien, la corrección lineal no es totalmente correcta, se puede asumir esta suposición debido a que las correcciones representan valores pequeños, comparadas con el alcance total.
 La tabla de tiro tiene como entrada los alcances tabulados cada 500 [m] y como salida el ángulo de elevación. Dentro de las consideraciones que se necesitan para su construcción, se encuentran: que el punto de caída esté a la misma altura que la posición de disparo (nivel del mar), que la aceleración de Coriolis no afecte la trayectoria  y que las condiciones atmosféricas sean normalizadas a ISA (ICAO). Para la construcción de la tabla de tiro, se exigen diversas etapas de cálculo que concluyen con la presentación de un extracto de los resultados, como se muestran en la siguiente figura: 
 
-<img src="img/Fig 7.png" align="centre" width = "700px"/>  
+<img src="img/Fig 7.png" align="centre" width = "700px"/> 
+  
 Figura N° 7: Extracto de la Tabla de Tiro diseñada.
 
 ## Validación del Modelo:
 Para la validación de la tabla de tiro diseñada, se realizó una comparación con la tabla SANOP 44 de la South African Navy de un montaje Oto-Melara 76/62 con las mismas características físicas, geométricas y métricas que el proyectil HE 76mm utilizado. 
 
 <img src="img/Fig 8.png" align="centre" width = "700px"/>
+  
 Figura N° 8: Extracto de la comparación entre Tabla de Tiro diseñada y SANOP.
 
 Como se observa en la tabla comparativa, las diferencias de distancias tienen un margen que no supera el 2% llegando en algunos casos a presentar un margen menor al 1%. Por último, con el propósito de graficar las diferencias entre el modelo propuesto y el validado, se realizó una comparación tanto de los ángulos de disparo como del tiempo de vuelo en función del alcance, según lo muestran las siguientes figuras: 
 
 <img src="img/Fig 9.png" align="centre" width = "650px"/>
+  
 Figura N° 9: Gráfico de comparación entre ángulo de disparo y alcance.
 
 <img src="img/Fig 10.png" align="centre" width = "650px"/>
+  
 Figura N° 10: Gráfico de comparación entre tiempo de vuelo y alcance.
 
 ## Conclusiones:
@@ -119,3 +128,4 @@ Por último, cabe señalar que la determinación del coeficiente de drag de un p
 11. S.l.: Kungliga Tekniska Högskolan (KTH), Royal Institute of Technology, Stockholm.
 12. Royal Navy, (1984). Textbook of Ballistics and Gunnery. Londres, Inglaterra.: Her Majesty´s Stationery Office.
 
+  </div>
