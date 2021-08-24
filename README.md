@@ -9,7 +9,7 @@ Enlace a la publicación del documento en [Revista de Marina](https://revistamar
 Enlace al PDF de la [Publicación.](https://github.com/educarrascov/RangeTable_Design/blob/main/PDF/1.%20Modelo%20Modificado%20Masa%20Puntual%20para%20Tablas%20de%20Tiro.pdf)
 ___________
   
-_**Resumen:
+_**Resumen**:
 La balística nace con la necesidad de predecir el comportamiento de las armas, enfocada en el estudio de las fuerzas físicas que afectan al proyectil tanto al interior del cañón como en su trayectoria de desplazamiento e impacto. Una adecuada simulación de esta trayectoria, utilizando el Modelo Modificado de Masa Puntual, permite predecir el punto de impacto del proyectil y, en consecuencia, la generación, a través de un modelo matemático, de su tabla de tiro en condiciones de atmósfera real._
 
 **Palabras Claves:
@@ -35,17 +35,20 @@ La mecánica de fluidos es la rama que se ocupa del movimiento e interacción de
 En un fluido real como es el caso de la atmósfera terrestre, existe una fuerza adicional causada por la resistencia del fluido en el proyectil, lo que produce un empuje opuesto al avance conocido como drag aerodinámico. 
 El drag aerodinámico está compuesto por 3 factores principales: rozamiento superficial (skin friction), resistencia de culote o base (base drag) y la resistencia al avance (wave drag). El drag de rozamiento superficial es causado por la resistencia del fluido en la superficie del proyectil, la resistencia de culote es causada por la turbulencia del aire donde un pequeño flujo se forma por diferencia de presiones entre la parte anterior y posterior del proyectil y es función del área del culote, por último, la resistencia al avance es causada por la compresión y expansión de los gases del fluido al entrar en contacto con el proyectil y depende de la forma aerodinámica que tenga.
 En base a lo planteado anteriormente, se realizó un modelo computacional de la pmunición a través de un software CAD (Computer-Aided Design), utilizando los planos de un proyectil Oto-Melara 76/62.
-  
-                                   ![Alt text](img/fig1.png?raw=true "Title")
-                                Figura N° 1: Modelo digital del proyectil 76/62.
+
+<img src="img/Fig 1.png" align="center" width = "600px"/>
+    
+Figura N° 1: Modelo digital del proyectil 76/62.
   
 Luego, se utilizó un software de mecánica de fluidos CFD (Computational Fluid Dynamics) para simular un túnel de viento supersónico  que permitiera determinar el coeficiente de drag en función de la velocidad, como se muestra en la siguiente figura.
-                                     ![Alt text](img/fig2.png?raw=true "Title")
-                               Figura N° 2: Simulación del Proyectil en Software (CFD).
+                                     
+<img src="img/Fig 2.png" align="centre" width = "600px"/>
+Figura N° 2: Simulación del Proyectil en Software (CFD).
   
 Es importante señalar que, el coeficiente de drag es una medida que demuestra la eficiencia de un objeto en función de la resistencia que impone el fluido, dependiendo de dos factores principales: el número de Mach (estimación de la velocidad del fluido en base a la velocidad del sonido) y la forma aerodinámica de un proyectil determinado. Este coeficiente, es representado en una curva que varía en función de la velocidad, creada a partir de los valores obtenidos del análisis del túnel de viento, como se muestra en la siguiente figura.
   
-                         Figura N° 3: Gráfico de coeficiente de drag en función del número de MACH.
+<img src="img/Fig 3.png" align="centre" width = "600px"/>
+Figura N° 3: Gráfico de coeficiente de drag en función del número de MACH.
   
 Como se observa, el coeficiente de drag además tiene un alto valor en la región de 1 Mach, donde el proyectil está tratando de atravesar la barrera del sonido y se reduce de forma constante en la región supersónica hasta que se estabiliza.
 Una vez determinado el coeficiente de drag en función de la velocidad para esta munición en particular (76/62), se debe efectuar la simulación utilizando una atmósfera estandarizada (ISA International Standard Atmosphere – ICAO International Civil Aviation Organization) que permita sobre ella, realizar correcciones, adecuaciones y variaciones similares a las reales al momento del disparo.
@@ -54,7 +57,8 @@ Una vez determinado el coeficiente de drag en función de la velocidad para esta
 La atmósfera estandarizada es un estándar de la ISO (International Standard Organization) desarrollado como un modelo de atmosfera terrestre que permite obtener valores de presión, temperatura, densidad y viscosidad del aire en función de la altitud; se utiliza principalmente para la confección de cálculos aerodinámicos, navegación aérea y cálculos balísticos.
 Dentro de las hipótesis que plantea para establecer una atmósfera normalizada, se encuentran las siguientes: Grado de humedad nulo, atmósfera en equilibrio (inexistencia de vientos) y que se cumpla la ley de los gases perfectos. En base a estas condiciones, se presenta un extracto de la atmósfera estandarizada en la siguiente figura.
   
-                                Figura N° 4: Extracto de la Atmósfera Estandarizada ISA-ICAO.
+<img src="img/Fig 4.png" align="centre" width = "700px"/>  
+Figura N° 4: Extracto de la Atmósfera Estandarizada ISA-ICAO.
   
 Con las condiciones de la Atmósfera Estandarizada y la determinación del coeficiente de drag en función de la velocidad, podemos modelar el comportamiento balístico del proyectil utilizando el Modelo Modificado de Masa Puntual que se presenta a continuación.
   
@@ -68,27 +72,33 @@ Resultados de simulación de trayectorias en gráficos de 2D y 3D.
 El modelo seleccionado permite modelar las trayectorias para este caso particular, donde las ecuaciones de movimiento consideran la corrección por fuerza Drag, fuerza Coriolis, esfericidad terrestre, efecto Magnus y movimientos giroscópicos. 
 Enunciadas las condiciones atmosféricas estandarizadas, y disponiendo de un determinado Δt, se utilizan las ecuaciones y parámetros  que describen el movimiento del proyectil y tras su integración, se obtienen las siguientes trayectorias para ángulos de proyección desde 5°a 45° según lo muestra el gráfico de simulación de trayectorias realizada en el software MATLAB para el eje de las ordenadas, de las abscisas y el eje Z correspondientemente. 
   
-                          Figura N° 5: Simulación de trayectorias en MATLAB, eje X e Y.
-  
-                          Figura N° 6: Simulación de trayectorias en MATLAB, eje X, Y, Z.
+<img src="img/Fig 5.png" align="centre" width = "650px"/>
+Figura N° 5: Simulación de trayectorias en MATLAB, eje X e Y.
+
+<img src="img/Fig 6.png" align="centre" width = "650px"/>
+Figura N° 6: Simulación de trayectorias en MATLAB, eje X, Y, Z.
     
 
 ## Tabla de Tiro
 La tabla de tiro principal permite la determinación de un ángulo de elevación necesario para batir la proyección sobre el plano horizontal (tabla de tiro de superficie) de un blanco, a una determinada distancia e incluye correcciones que se añaden linealmente y corresponden a cambios atmosféricos, de velocidad inicial, de peso del proyectil y de viento; si bien, la corrección lineal no es totalmente correcta, se puede asumir esta suposición debido a que las correcciones representan valores pequeños, comparadas con el alcance total.
 La tabla de tiro tiene como entrada los alcances tabulados cada 500 [m] y como salida el ángulo de elevación. Dentro de las consideraciones que se necesitan para su construcción, se encuentran: que el punto de caída esté a la misma altura que la posición de disparo (nivel del mar), que la aceleración de Coriolis no afecte la trayectoria  y que las condiciones atmosféricas sean normalizadas a ISA (ICAO). Para la construcción de la tabla de tiro, se exigen diversas etapas de cálculo que concluyen con la presentación de un extracto de los resultados, como se muestran en la siguiente figura: 
 
-                               Figura N° 7: Extracto de la Tabla de Tiro diseñada.
+<img src="img/Fig 7.png" align="centre" width = "700px"/>  
+Figura N° 7: Extracto de la Tabla de Tiro diseñada.
 
 ## Validación del Modelo:
 Para la validación de la tabla de tiro diseñada, se realizó una comparación con la tabla SANOP 44 de la South African Navy de un montaje Oto-Melara 76/62 con las mismas características físicas, geométricas y métricas que el proyectil HE 76mm utilizado. 
 
-                       Figura N° 8: Extracto de la comparación entre Tabla de Tiro diseñada y SANOP.
+<img src="img/Fig 8.png" align="centre" width = "700px"/>
+Figura N° 8: Extracto de la comparación entre Tabla de Tiro diseñada y SANOP.
 
 Como se observa en la tabla comparativa, las diferencias de distancias tienen un margen que no supera el 2% llegando en algunos casos a presentar un margen menor al 1%. Por último, con el propósito de graficar las diferencias entre el modelo propuesto y el validado, se realizó una comparación tanto de los ángulos de disparo como del tiempo de vuelo en función del alcance, según lo muestran las siguientes figuras: 
 
-                          Figura N° 9: Gráfico de comparación entre ángulo de disparo y alcance.
+<img src="img/Fig 9.png" align="centre" width = "650px"/>
+Figura N° 9: Gráfico de comparación entre ángulo de disparo y alcance.
 
-                          Figura N° 10: Gráfico de comparación entre tiempo de vuelo y alcance.
+<img src="img/Fig 10.png" align="centre" width = "650px"/>
+Figura N° 10: Gráfico de comparación entre tiempo de vuelo y alcance.
 
 ## Conclusiones:
 De acuerdo a lo planteado anteriormente, tras los resultados obtenidos por la simulación y ejercida la comparación con una tabla validada; se puede concluir que el modelo presentado permite una adecuada predicción de la trayectoria de un proyectil en condiciones de atmósfera real, lo que constituye un apoyo para la toma de decisiones en materias de adquisición de munición y de confiabilidad del arma. 
