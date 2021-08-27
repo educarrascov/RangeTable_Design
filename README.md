@@ -88,14 +88,14 @@ Figura N° 6: Simulación de trayectorias en MATLAB, eje X, Y, Z.
 La tabla de tiro principal permite la determinación de un ángulo de elevación necesario para batir la proyección sobre el plano horizontal (tabla de tiro de superficie) de un blanco, a una determinada distancia e incluye correcciones que se añaden linealmente y corresponden a cambios atmosféricos, de velocidad inicial, de peso del proyectil y de viento; si bien, la corrección lineal no es totalmente correcta, se puede asumir esta suposición debido a que las correcciones representan valores pequeños, comparadas con el alcance total.
 La tabla de tiro tiene como entrada los alcances tabulados cada 500 [m] y como salida el ángulo de elevación. Dentro de las consideraciones que se necesitan para su construcción, se encuentran: que el punto de caída esté a la misma altura que la posición de disparo (nivel del mar), que la aceleración de Coriolis no afecte la trayectoria  y que las condiciones atmosféricas sean normalizadas a ISA (ICAO). Para la construcción de la tabla de tiro, se exigen diversas etapas de cálculo que concluyen con la presentación de un extracto de los resultados, como se muestran en la siguiente figura: 
 
-<img src="img/Fig 7.png" align="centre" width = "700px"/> 
+<img src="img/Fig 7.png" align="centre" width = "750px"/> 
   
 Figura N° 7: Extracto de la Tabla de Tiro diseñada.
 
 ## Validación del Modelo:
 Para la validación de la tabla de tiro diseñada, se realizó una comparación con la tabla SANOP 44 de la South African Navy de un montaje Oto-Melara 76/62 con las mismas características físicas, geométricas y métricas que el proyectil HE 76mm utilizado. 
 
-<img src="img/Fig 8.png" align="centre" width = "700px"/>
+<img src="img/Fig 8.png" align="centre" width = "750px"/>
   
 Figura N° 8: Extracto de la comparación entre Tabla de Tiro diseñada y SANOP.
 
