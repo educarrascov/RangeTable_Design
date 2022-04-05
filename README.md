@@ -6,7 +6,9 @@
   
 Enlace a la publicación del documento en [Revista de Marina, Año CXXXIII, Volumen 135, Número 963.](https://revistamarina.cl/es/articulo/diseno-de-tablas-de-tiro-utilizando-el-modelo-modificado-de-masa-puntual)    
 
-Enlace al .pdf de la [Publicación.](https://github.com/educarrascov/RangeTable_Design/blob/main/PDF/1.%20Modelo%20Modificado%20Masa%20Puntual%20para%20Tablas%20de%20Tiro.pdf)
+Enlace al [.pdf de la Publicación.](https://github.com/educarrascov/RangeTable_Design/blob/main/PDF/1.%20Modelo%20Modificado%20Masa%20Puntual%20para%20Tablas%20de%20Tiro.pdf)
+  
+Enlace a los [Script asociados a la Publicación.](https://github.com/educarrascov/RangeTable_Design/tree/main/Script)
 ___________
   
 _**Resumen**:
